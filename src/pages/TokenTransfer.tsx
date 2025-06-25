@@ -37,7 +37,7 @@ const TokenTransfer = () => {
       const explorerUrl = `${
         chainId === 1114
           ? "https://scan.test2.btcs.network"
-          : "https://scan.test.btcs.network"
+          : "https://scan.coredao.org/"
       }/tx/${txHash}`;
 
       toast.success(
@@ -63,9 +63,6 @@ const TokenTransfer = () => {
     if (chainId === 1114) {
       //Testnet2
       return "https://scan.test2.btcs.network/faucet";
-    } else if (chainId === 1115) {
-      //Testnet1
-      return "https://scan.test.btcs.network/faucet";
     }
     return "";
   };
@@ -145,7 +142,7 @@ const TokenTransfer = () => {
         }
         className={styles.transferButton}
       >
-        {chainId !== 1114 && chainId !== 1115
+        {chainId !== 1114
           ? "Connect to Core Testnet"
           : isTransactionPending
           ? "Sending..."

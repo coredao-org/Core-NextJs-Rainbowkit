@@ -60,12 +60,12 @@ core-quickstart/
 ```ts
 // src/wagmi.ts
 import { getDefaultConfig } from "@rainbow-me/rainbowkit";
-import { coreDao, coreTestnet1, coreTestnet2 } from "wagmi/chains";
+import { coreDao, coreTestnet2 } from "wagmi/chains";
 
 export const config = getDefaultConfig({
   appName: "Core Quickstart",
   projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!,
-  chains: [coreDao, coreTestnet1, coreTestnet2],
+  chains: [coreDao, coreTestnet2],
   ssr: true,
 });
 ```
